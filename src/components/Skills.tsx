@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Flask, Globe, BookOpen, Microscope, Database, LineChart } from 'lucide-react';
+import { Beaker, Globe, BookOpen, Microscope, Database, LineChart } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -11,7 +11,7 @@ const Skills = () => {
     },
     {
       title: 'Nuclear Geology',
-      icon: <Flask className="h-8 w-8 text-blue-600" />,
+      icon: <Beaker className="h-8 w-8 text-blue-600" />,
       skills: ['Radiometric Dating', 'Isotope Analysis', 'Gamma Ray Spectrometry', 'Nuclear Waste Management']
     },
     {
