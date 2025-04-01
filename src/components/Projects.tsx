@@ -1,33 +1,33 @@
 
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Website',
-      description: 'A fully responsive e-commerce platform with product catalog, shopping cart, and secure checkout.',
-      image: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-      liveLink: '#',
-      githubLink: '#'
+      title: 'Radiometric Dating of Volcanic Rocks',
+      description: 'Research project focusing on the application of radiometric dating techniques to volcanic rocks in the East African Rift Valley.',
+      image: 'https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      tags: ['Radiometric Dating', 'Volcanic Geology', 'Field Research', 'Laboratory Analysis'],
+      reportLink: '#',
+      detailsLink: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'A productivity application for managing tasks, setting deadlines, and organizing projects.',
-      image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['TypeScript', 'React', 'Firebase', 'Tailwind CSS'],
-      liveLink: '#',
-      githubLink: '#'
+      title: 'Uranium Deposit Characterization',
+      description: 'Assessment and characterization of uranium deposits in sedimentary basins using geochemical and geophysical methods.',
+      image: 'https://images.unsplash.com/photo-1624913503273-5f9c4e980dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      tags: ['Uranium Geology', 'Geochemistry', 'Resource Assessment', 'Environmental Impact'],
+      reportLink: '#',
+      detailsLink: '#'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A web application that provides real-time weather information and forecasts for any location.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['JavaScript', 'REST API', 'CSS3', 'HTML5'],
-      liveLink: '#',
-      githubLink: '#'
+      title: 'Environmental Impact of Mining Activities',
+      description: 'Study on the environmental impact of mining activities on groundwater quality and soil contamination in mining regions.',
+      image: 'https://images.unsplash.com/photo-1605050825077-289927d3a3bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      tags: ['Environmental Geology', 'Mining Impact', 'Water Quality', 'Remediation'],
+      reportLink: '#',
+      detailsLink: '#'
     }
   ];
 
@@ -71,16 +71,16 @@ const Projects = () => {
                 
                 <div className="flex gap-3">
                   <Button asChild size="sm" variant="outline" className="flex items-center gap-1">
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                      Live Demo
+                    <a href={project.reportLink} target="_blank" rel="noopener noreferrer">
+                      <FileText className="h-4 w-4" />
+                      Research Report
                     </a>
                   </Button>
                   
                   <Button asChild size="sm" variant="outline" className="flex items-center gap-1">
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4" />
-                      Code
+                    <a href={project.detailsLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4" />
+                      Details
                     </a>
                   </Button>
                 </div>

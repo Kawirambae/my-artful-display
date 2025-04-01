@@ -10,17 +10,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-            Hi, I'm <span className="text-blue-600">Your Name</span>
+            Hi, I'm <span className="text-blue-600">Loise Kawira Mbae</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-gray-600 mb-8 max-w-2xl">
-            Web Developer & Designer creating beautiful digital experiences
+            Nuclear Geologist from Kenya creating impactful research and analysis
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               View My Work
             </Button>
             <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-              Download Resume
+              Download CV
             </Button>
           </div>
           

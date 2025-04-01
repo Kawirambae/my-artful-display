@@ -1,38 +1,38 @@
 
 import React from 'react';
-import { Code, Database, Figma, Globe, Server, Smartphone } from 'lucide-react';
+import { Flask, Globe, BookOpen, Microscope, Database, LineChart } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
-      icon: <Code className="h-8 w-8 text-blue-600" />,
-      skills: ['HTML5/CSS3', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS']
+      title: 'Geological Analysis',
+      icon: <Microscope className="h-8 w-8 text-blue-600" />,
+      skills: ['Mineral Identification', 'Rock Classification', 'Structural Analysis', 'Geological Mapping', 'Field Research']
     },
     {
-      title: 'Backend Development',
-      icon: <Server className="h-8 w-8 text-blue-600" />,
-      skills: ['Node.js', 'Express', 'RESTful APIs', 'Authentication']
+      title: 'Nuclear Geology',
+      icon: <Flask className="h-8 w-8 text-blue-600" />,
+      skills: ['Radiometric Dating', 'Isotope Analysis', 'Gamma Ray Spectrometry', 'Nuclear Waste Management']
     },
     {
-      title: 'Database',
+      title: 'Research Methods',
+      icon: <BookOpen className="h-8 w-8 text-blue-600" />,
+      skills: ['Scientific Writing', 'Field Sampling', 'Laboratory Techniques', 'Research Design']
+    },
+    {
+      title: 'Data Analysis',
+      icon: <LineChart className="h-8 w-8 text-blue-600" />,
+      skills: ['Statistical Analysis', 'Data Visualization', 'GIS', 'Remote Sensing', 'Modeling']
+    },
+    {
+      title: 'Technical Skills',
       icon: <Database className="h-8 w-8 text-blue-600" />,
-      skills: ['MongoDB', 'PostgreSQL', 'SQL', 'Firebase']
+      skills: ['Laboratory Equipment', 'Sample Preparation', 'XRF Analysis', 'Microscopy']
     },
     {
-      title: 'UI/UX Design',
-      icon: <Figma className="h-8 w-8 text-blue-600" />,
-      skills: ['Figma', 'Adobe XD', 'Responsive Design', 'Wireframing']
-    },
-    {
-      title: 'Mobile Development',
-      icon: <Smartphone className="h-8 w-8 text-blue-600" />,
-      skills: ['React Native', 'Progressive Web Apps', 'Mobile-First Design']
-    },
-    {
-      title: 'Deployment & Tools',
+      title: 'Field Work',
       icon: <Globe className="h-8 w-8 text-blue-600" />,
-      skills: ['Git', 'GitHub', 'Vercel', 'Netlify', 'CI/CD']
+      skills: ['Geological Surveying', 'Field Mapping', 'Sample Collection', 'Environmental Assessment']
     }
   ];
 
