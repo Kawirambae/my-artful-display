@@ -2,46 +2,47 @@
 import React from 'react';
 import { ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Radiometric Dating of Volcanic Rocks',
-      description: 'Research project focusing on the application of radiometric dating techniques to volcanic rocks in the East African Rift Valley.',
-      image: 'https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['Radiometric Dating', 'Volcanic Geology', 'Field Research', 'Laboratory Analysis'],
+      title: 'Radiochemical Research in Warsaw, Poland',
+      description: 'Worked at the Institute of Nuclear Chemistry in Warsaw, Poland, using radiotracers to improve solvent extraction processes and electric beam technology to break down inorganic and organic compounds in waste.',
+      image: '/lovable-uploads/2e01ef7b-5913-417a-9e74-3c9ba455763e.png',
+      tags: ['Radiotracers', 'Electric Beam', 'Waste Management', 'Laboratory Analysis'],
       reportLink: '#',
       detailsLink: '#'
     },
     {
-      title: 'Uranium Deposit Characterization',
-      description: 'Assessment and characterization of uranium deposits in sedimentary basins using geochemical and geophysical methods.',
-      image: 'https://images.unsplash.com/photo-1624913503273-5f9c4e980dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['Uranium Geology', 'Geochemistry', 'Resource Assessment', 'Environmental Impact'],
+      title: 'Sediment Tracking in Saldanha Bay, South Africa',
+      description: 'Research at Stellenbosch University using natural radionuclides to understand sediment movement patterns in Saldanha Bay, Cape Town, South Africa.',
+      image: '/lovable-uploads/f5dddc49-82c6-4d09-8227-53a7ad63660f.png',
+      tags: ['Natural Radionuclides', 'Sediment Movement', 'Field Research', 'Environmental Analysis'],
       reportLink: '#',
-      detailsLink: '#'
+      detailsLink: 'https://www.ans.org/news/article-6342/the-iaea-and-two-african-universities-deploy-sediment-tracking-tech-in-kenya/'
     },
     {
-      title: 'Environmental Impact of Mining Activities',
-      description: 'Study on the environmental impact of mining activities on groundwater quality and soil contamination in mining regions.',
-      image: 'https://images.unsplash.com/photo-1605050825077-289927d3a3bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      tags: ['Environmental Geology', 'Mining Impact', 'Water Quality', 'Remediation'],
-      reportLink: '#',
+      title: 'DUGS Development for Kilindini Harbour',
+      description: 'Part of an IAEA research team that developed DUGS, a remote equipment for studying radionuclides in sediments in Kilindini Harbour, Mombasa, Kenya.',
+      image: '/lovable-uploads/a7b9fb86-ec01-45ab-b682-69624d21b7b9.png',
+      tags: ['DUGS Technology', 'Radionuclides', 'Harbor Research', 'Equipment Development', 'IAEA Collaboration'],
+      reportLink: 'https://www.ans.org/news/article-6342/the-iaea-and-two-african-universities-deploy-sediment-tracking-tech-in-kenya/',
       detailsLink: '#'
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-navy-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl font-bold text-center text-white mb-12">
           My Projects
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition-all hover:shadow-lg">
-              <div className="h-48 overflow-hidden">
+            <Card key={index} className="bg-navy-800 overflow-hidden shadow-lg border border-violet-400 transition-all hover:shadow-violet-400/20 hover:border-violet-300">
+              <div className="h-60 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -49,12 +50,12 @@ const Projects = () => {
                 />
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   {project.description}
                 </p>
                 
@@ -62,35 +63,35 @@ const Projects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded"
+                      className="bg-violet-900 text-violet-200 text-xs px-2 py-1 rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex gap-3">
-                  <Button asChild size="sm" variant="outline" className="flex items-center gap-1">
+                <div className="flex gap-3 mt-4">
+                  <Button asChild size="sm" variant="outline" className="flex items-center gap-1 border-violet-400 text-violet-300 hover:bg-violet-900 hover:text-white">
                     <a href={project.reportLink} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-4 w-4" />
                       Research Report
                     </a>
                   </Button>
                   
-                  <Button asChild size="sm" variant="outline" className="flex items-center gap-1">
+                  <Button asChild size="sm" variant="outline" className="flex items-center gap-1 border-violet-400 text-violet-300 hover:bg-violet-900 hover:text-white">
                     <a href={project.detailsLink} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4" />
                       Details
                     </a>
                   </Button>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
         <div className="mt-12 text-center">
-          <Button className="bg-blue-600 hover:bg-blue-700">
+          <Button className="bg-violet-600 hover:bg-violet-700 text-white">
             View All Projects
           </Button>
         </div>
