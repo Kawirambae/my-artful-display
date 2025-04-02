@@ -6,40 +6,40 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Geological Analysis',
-      icon: <Microscope className="h-8 w-8 text-blue-600" />,
+      icon: <Microscope className="h-8 w-8 text-violet-400" />,
       skills: ['Mineral Identification', 'Rock Classification', 'Structural Analysis', 'Geological Mapping', 'Field Research']
     },
     {
-      title: 'Nuclear Geology',
-      icon: <Beaker className="h-8 w-8 text-blue-600" />,
-      skills: ['Radiometric Dating', 'Isotope Analysis', 'Gamma Ray Spectrometry', 'Nuclear Waste Management']
+      title: 'Nuclear Instrumentation',
+      icon: <Beaker className="h-8 w-8 text-violet-400" />,
+      skills: ['XRF Analysis', 'Gamma Spectrometry', 'BAM in Air Quality', 'Liquid Scintillation', 'Radiotracers', 'E-beam']
     },
     {
       title: 'Research Methods',
-      icon: <BookOpen className="h-8 w-8 text-blue-600" />,
+      icon: <BookOpen className="h-8 w-8 text-violet-400" />,
       skills: ['Scientific Writing', 'Field Sampling', 'Laboratory Techniques', 'Research Design']
     },
     {
       title: 'Data Analysis',
-      icon: <LineChart className="h-8 w-8 text-blue-600" />,
+      icon: <LineChart className="h-8 w-8 text-violet-400" />,
       skills: ['Statistical Analysis', 'Data Visualization', 'GIS', 'Remote Sensing', 'Modeling']
     },
     {
       title: 'Technical Skills',
-      icon: <Database className="h-8 w-8 text-blue-600" />,
-      skills: ['Laboratory Equipment', 'Sample Preparation', 'XRF Analysis', 'Microscopy']
+      icon: <Database className="h-8 w-8 text-violet-400" />,
+      skills: ['Laboratory Equipment', 'Sample Preparation', 'Radiometric Dating', 'Isotope Analysis']
     },
     {
-      title: 'Field Work',
-      icon: <Globe className="h-8 w-8 text-blue-600" />,
-      skills: ['Geological Surveying', 'Field Mapping', 'Sample Collection', 'Environmental Assessment']
+      title: 'Software Development',
+      icon: <Globe className="h-8 w-8 text-violet-400" />,
+      skills: ['Web Development', 'Startup Building', 'Python', 'Database Development']
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-blue-50">
+    <section id="skills" className="py-20 bg-navy-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl font-bold text-center text-white mb-12">
           My Skills
         </h2>
         
@@ -47,13 +47,13 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px]"
+              className="bg-navy-800 rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px] border border-violet-400"
             >
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-3">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -62,7 +62,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex} 
-                    className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    className="bg-violet-900 text-violet-200 text-sm px-3 py-1 rounded-full"
                   >
                     {skill}
                   </span>

@@ -23,6 +23,19 @@ export default {
 				sans: ['Inter', 'sans-serif'],
 			},
 			colors: {
+				navy: {
+					700: '#1f2d47',
+					800: '#172035',
+					900: '#0f1624',
+				},
+				violet: {
+					200: '#dbd1fb',
+					300: '#c6b5f5',
+					400: '#b299f0',
+					600: '#8256e7',
+					700: '#7041e0',
+					900: '#4917c5',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
