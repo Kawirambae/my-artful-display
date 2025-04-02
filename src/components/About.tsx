@@ -17,7 +17,7 @@ const About = () => {
             <div className="col-span-1 flex justify-center">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-100 shadow-lg">
                 <img 
-                  src="/profile-image.jpg" 
+                  src="/lovable-uploads/701f3a61-ef37-4b7f-a936-3fb5d5a2d511.png" 
                   alt="Loise Kawira Mbae" 
                   className="w-full h-full object-cover"
                 />
