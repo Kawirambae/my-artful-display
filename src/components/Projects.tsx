@@ -3,13 +3,16 @@ import React from 'react';
 import { ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useToast } from '@/components/ui/use-toast';
 
 const Projects = () => {
+  const { toast } = useToast();
+  
   const projects = [
     {
       title: 'Radiochemical Research in Warsaw, Poland',
       description: 'Worked at the Institute of Nuclear Chemistry in Warsaw, Poland, using radiotracers to improve solvent extraction processes and electric beam technology to break down inorganic and organic compounds in waste.',
-      image: '/lovable-uploads/2e01ef7b-5913-417a-9e74-3c9ba455763e.png',
+      image: '/placeholder.svg',
       tags: ['Radiotracers', 'Electric Beam', 'Waste Management', 'Laboratory Analysis'],
       reportLink: '#',
       detailsLink: '#'
@@ -17,7 +20,7 @@ const Projects = () => {
     {
       title: 'Sediment Tracking in Saldanha Bay, South Africa',
       description: 'Research at Stellenbosch University using natural radionuclides to understand sediment movement patterns in Saldanha Bay, Cape Town, South Africa.',
-      image: '/lovable-uploads/f5dddc49-82c6-4d09-8227-53a7ad63660f.png',
+      image: '/placeholder.svg',
       tags: ['Natural Radionuclides', 'Sediment Movement', 'Field Research', 'Environmental Analysis'],
       reportLink: '#',
       detailsLink: 'https://www.ans.org/news/article-6342/the-iaea-and-two-african-universities-deploy-sediment-tracking-tech-in-kenya/'
@@ -25,12 +28,21 @@ const Projects = () => {
     {
       title: 'DUGS Development for Kilindini Harbour',
       description: 'Part of an IAEA research team that developed DUGS, a remote equipment for studying radionuclides in sediments in Kilindini Harbour, Mombasa, Kenya.',
-      image: '/lovable-uploads/a7b9fb86-ec01-45ab-b682-69624d21b7b9.png',
+      image: '/placeholder.svg',
       tags: ['DUGS Technology', 'Radionuclides', 'Harbor Research', 'Equipment Development', 'IAEA Collaboration'],
       reportLink: 'https://www.ans.org/news/article-6342/the-iaea-and-two-african-universities-deploy-sediment-tracking-tech-in-kenya/',
       detailsLink: '#'
     }
   ];
+
+  const handleImageError = (index: number) => {
+    console.log(`Image ${index} failed to load, using placeholder`);
+    toast({
+      title: "Image couldn't load",
+      description: "Using placeholder image instead",
+      variant: "destructive",
+    });
+  };
 
   return (
     <section id="projects" className="py-20 bg-navy-900">
@@ -47,10 +59,7 @@ const Projects = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform hover:scale-105"
-                  onError={(e) => {
-                    console.error(`Error loading image: ${project.image}`);
-                    e.currentTarget.src = "/placeholder.svg";
-                  }}
+                  onError={() => handleImageError(index)}
                 />
               </div>
               
