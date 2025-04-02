@@ -47,6 +47,10 @@ const Projects = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform hover:scale-105"
+                  onError={(e) => {
+                    console.error(`Error loading image: ${project.image}`);
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
               </div>
               
