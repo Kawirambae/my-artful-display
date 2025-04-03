@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -11,50 +11,22 @@ const Projects = () => {
     {
       title: 'Radiochemical Research in Warsaw, Poland',
       description: 'Worked at the Institute of Nuclear Chemistry in Warsaw, Poland, using radiotracers to improve solvent extraction processes and electric beam technology to break down inorganic and organic compounds in waste.',
-      image: '/lovable-uploads/a399a9c9-d99c-4df9-a4de-787810d34654.png',
+      image: 'https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
       tags: ['Radiotracers', 'Electric Beam', 'Waste Management', 'Laboratory Analysis']
     },
     {
       title: 'Sediment Tracking in Saldanha Bay, South Africa',
       description: 'Research at Stellenbosch University using natural radionuclides to understand sediment movement patterns in Saldanha Bay, Cape Town, South Africa.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3',
       tags: ['Natural Radionuclides', 'Sediment Movement', 'Field Research', 'Environmental Analysis']
     },
     {
       title: 'DUGS Development for Kilindini Harbour',
       description: 'Part of an IAEA research team that developed DUGS, a remote equipment for studying radionuclides in sediments in Kilindini Harbour, Mombasa, Kenya.',
-      image: '/placeholder.svg',
+      image: 'https://images.unsplash.com/photo-1582132062487-5d8af66a3574?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3',
       tags: ['DUGS Technology', 'Radionuclides', 'Harbor Research', 'Equipment Development', 'IAEA Collaboration']
     }
   ];
-
-  // Monitor uploaded images from chat
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      try {
-        const data = JSON.parse(event.data);
-        if (data.type === 'image-upload' && data.url && data.index !== undefined) {
-          // Update the project image at the specified index
-          const projectIndex = data.index;
-          if (projectIndex >= 0 && projectIndex < projects.length) {
-            projects[projectIndex].image = data.url;
-            
-            // Reset failed image state for this index
-            setFailedImages(prev => {
-              const newState = {...prev};
-              delete newState[projectIndex];
-              return newState;
-            });
-          }
-        }
-      } catch (e) {
-        // Ignore parse errors for non-JSON messages
-      }
-    };
-
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
 
   const handleImageError = (index: number) => {
     console.log(`Image ${index} failed to load, using placeholder`);
