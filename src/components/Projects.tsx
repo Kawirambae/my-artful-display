@@ -12,7 +12,7 @@ const Projects = () => {
     {
       title: 'Radiochemical Research in Warsaw, Poland',
       description: 'Worked at the Institute of Nuclear Chemistry in Warsaw, Poland, using radiotracers to improve solvent extraction processes and electric beam technology to break down inorganic and organic compounds in waste.',
-      image: '/placeholder.svg',
+      image: '/lovable-uploads/a399a9c9-d99c-4df9-a4de-787810d34654.png',
       tags: ['Radiotracers', 'Electric Beam', 'Waste Management', 'Laboratory Analysis'],
       reportLink: '#',
       detailsLink: '#'
