@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,6 +7,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 const Projects = () => {
   const { toast } = useToast();
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
   
   const projects = [
     {
@@ -37,6 +38,8 @@ const Projects = () => {
 
   const handleImageError = (index: number) => {
     console.log(`Image ${index} failed to load, using placeholder`);
+    setFailedImages(prev => ({ ...prev, [index]: true }));
+    
     toast({
       title: "Image couldn't load",
       description: "Using placeholder image instead",
@@ -54,13 +57,19 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-navy-800 overflow-hidden shadow-lg border border-violet-400 transition-all hover:shadow-violet-400/20 hover:border-violet-300">
-              <div className="h-60 overflow-hidden">
+              <div className="h-60 overflow-hidden bg-navy-700 relative">
                 <img 
-                  src={project.image} 
+                  src={failedImages[index] ? '/placeholder.svg' : project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                   onError={() => handleImageError(index)}
+                  loading="lazy"
                 />
+                {failedImages[index] && (
+                  <div className="absolute inset-0 flex items-center justify-center text-gray-300 text-sm p-4 text-center">
+                    Image unavailable
+                  </div>
+                )}
               </div>
               
               <CardContent className="p-6">
