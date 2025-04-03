@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
-  const age = 27;
-  
   return (
     <section id="about" className="py-20 bg-navy-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +23,7 @@ const About = () => {
             
             <div className="md:col-span-2 space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                Hello! I'm Loise Kawira Mbae, a {age}-year-old Nuclear Geologist from Kenya with a passion for geological research and environmental science analysis.
+                Hello! I'm Loise Kawira Mbae, a Nuclear Geologist from Kenya with a passion for geological research and environmental science analysis.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 I specialize in using nuclear instrumentation such as XRF and gamma spectrometry to analyze environmental samples. My research focuses on environmental science, particularly studying radionuclides and their interactions with geological materials.

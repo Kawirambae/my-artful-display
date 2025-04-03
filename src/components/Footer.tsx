@@ -21,7 +21,7 @@ const Footer = () => {
           
           <div className="mt-4 md:mt-0">
             <p className="text-sm text-gray-400">
-              Made with passion for geology
+              Science for change
             </p>
           </div>
         </div>
