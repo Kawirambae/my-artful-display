@@ -31,9 +31,6 @@ const Hero = () => {
               Nuclear Geologist from Kenya creating impactful research and analysis
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center md:justify-start">
-              <Button className="bg-violet-600 hover:bg-violet-700 text-white">
-                View My Work
-              </Button>
               <Button variant="outline" className="border-violet-400 text-violet-300 hover:bg-violet-900 hover:text-white">
                 Download CV
               </Button>

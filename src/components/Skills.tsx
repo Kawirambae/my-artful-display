@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Beaker, Globe, BookOpen, Microscope, Database, LineChart } from 'lucide-react';
 
@@ -22,12 +21,12 @@ const Skills = () => {
     {
       title: 'Data Analysis',
       icon: <LineChart className="h-8 w-8 text-violet-400" />,
-      skills: ['Statistical Analysis', 'Data Visualization', 'GIS', 'Remote Sensing', 'Modeling']
+      skills: ['Statistical Analysis', 'Data Visualization', 'GIS', 'Remote Sensing']
     },
     {
       title: 'Technical Skills',
       icon: <Database className="h-8 w-8 text-violet-400" />,
-      skills: ['Laboratory Equipment', 'Sample Preparation', 'Radiometric Dating', 'Isotope Analysis']
+      skills: ['Laboratory Equipment', 'Sample Preparation']
     },
     {
       title: 'Software Development',
