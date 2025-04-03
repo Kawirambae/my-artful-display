@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Beaker, Globe, BookOpen, Microscope, Database, LineChart } from 'lucide-react';
 
@@ -36,7 +37,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-navy-900">
+    <section id="skills" className="py-20 bg-gradient-to-b from-navy-800 to-navy-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           My Skills
@@ -46,7 +47,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-navy-800 rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px] border border-violet-400"
+              className="bg-navy-800/80 backdrop-blur-sm rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px] border border-violet-400"
             >
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-3">
